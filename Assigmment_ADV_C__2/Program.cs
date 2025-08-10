@@ -118,6 +118,8 @@ namespace Assigmment_ADV_C__2
         #endregion
 
         #region Q6
+
+        /*
         class Q6
         {
             public static void Run()
@@ -126,7 +128,22 @@ namespace Assigmment_ADV_C__2
                 list.RemoveAll(x => x % 2 != 0);
                 Console.WriteLine(string.Join(" ", list));
             }
-        }
+        }*/
+        #endregion
+
+        #region Q7
+        /*
+        class Q7
+        {
+            public static void Run()
+            {
+                Queue<object> queue = new Queue<object>();
+                queue.Enqueue(1);
+                queue.Enqueue("Apple");
+                queue.Enqueue(5.28);
+                foreach (var item in queue) Console.WriteLine(item);
+            }
+        }*/
         #endregion
 
     }
