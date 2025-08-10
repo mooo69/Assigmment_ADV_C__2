@@ -1,4 +1,8 @@
-﻿namespace Assigmment_ADV_C__2
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Assigmment_ADV_C__2
 {
     internal class Program
     {
@@ -30,7 +34,28 @@
          }*/
         #endregion
 
-       
+        #region Q2
+        /*
+         class Q2
+         {
+             public static void Run()
+             {
+                 int n = int.Parse(Console.ReadLine());
+                 int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+                 bool isPalindrome = true;
+                 for (int i = 0; i < n / 2; i++)
+                 {
+                     if (arr[i] != arr[n - i - 1])
+                     {
+                         isPalindrome = false;
+                         break;
+                     }
+                 }
+                 Console.WriteLine(isPalindrome ? "YES" : "NO");
+             }
+         }*/
+        #endregion
+
 
 
     }
