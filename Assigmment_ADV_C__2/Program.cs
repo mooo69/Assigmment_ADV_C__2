@@ -171,5 +171,36 @@ namespace Assigmment_ADV_C__2
             }
         }*/
         #endregion
+
+        #region Q9
+        /*
+        class Q9
+        {
+            public static void Run()
+            {
+                string[] sizes = Console.ReadLine().Split(',');
+                int n1 = int.Parse(sizes[0]);
+                int n2 = int.Parse(sizes[1]);
+                int[] arr1 = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
+                int[] arr2 = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
+                List<int> result = new List<int>();
+                Dictionary<int, int> freq = new Dictionary<int, int>();
+                foreach (var num in arr1)
+                {
+                    if (!freq.ContainsKey(num)) freq[num] = 0;
+                    freq[num]++;
+                }
+                foreach (var num in arr2)
+                {
+                    if (freq.ContainsKey(num) && freq[num] > 0)
+                    {
+                        result.Add(num);
+                        freq[num]--;
+                    }
+                }
+                Console.WriteLine("[" + string.Join(",", result) + "]");
+            }
+        }*/
+        #endregion
     }
 }
