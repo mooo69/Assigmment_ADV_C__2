@@ -2,230 +2,242 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Assigmment_ADV_C__2
+namespace AllQuestionsProject
 {
-    internal class Program
+    #region Q1
+    class Q1
     {
-        #region q1
-        /* class CountGreater
-         {
-             public static void Run()
-             {
-                 string[] firstLine = Console.ReadLine().Split();
-                 int n = int.Parse(firstLine[0]);
-                 int q = int.Parse(firstLine[1]);
-
-                 int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-
-                 for (int i = 0; i < q; i++)
-                 {
-                     int x = int.Parse(Console.ReadLine());
-                     int count = 0;
-                     for (int j = 0; j < n; j++)
-                     {
-                         if (arr[j] > x)
-                         {
-                             count++;
-                         }
-                     }
-                     Console.WriteLine(count);
-                 }
-             }
-         }*/
-        #endregion
-
-        #region Q2
-        /*
-         class Q2
-         {
-             public static void Run()
-             {
-                 int n = int.Parse(Console.ReadLine());
-                 int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-                 bool isPalindrome = true;
-                 for (int i = 0; i < n / 2; i++)
-                 {
-                     if (arr[i] != arr[n - i - 1])
-                     {
-                         isPalindrome = false;
-                         break;
-                     }
-                 }
-                 Console.WriteLine(isPalindrome ? "YES" : "NO");
-             }
-         }*/
-        #endregion
-
-        #region Q3
-        /*
-        class Q3
+        public static void Run()
         {
-            public static void Run()
+            string[] firstLine = Console.ReadLine().Split();
+            int n = int.Parse(firstLine[0]);
+            int q = int.Parse(firstLine[1]);
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+            for (int i = 0; i < q; i++)
             {
-                int n = int.Parse(Console.ReadLine());
-                Queue<int> queue = new Queue<int>();
-                foreach (var val in Console.ReadLine().Split())
-                {
-                    queue.Enqueue(int.Parse(val));
-                }
-                Stack<int> stack = new Stack<int>();
-                while (queue.Count > 0) stack.Push(queue.Dequeue());
-                while (stack.Count > 0) queue.Enqueue(stack.Pop());
-                foreach (var item in queue) Console.Write(item + " ");
-                Console.WriteLine();
-            }
-        }*/
-        #endregion
-
-        #region Q4
-        /*
-        class Q4
-        {
-            public static void main()
-            {
-                string s = Console.ReadLine();
-                Stack<char> stack = new Stack<char>();
-                foreach (char c in s)
-                {
-                    if (c == '(' || c == '[' || c == '{') stack.Push(c);
-                    else
-                    {
-                        if (stack.Count == 0) { Console.WriteLine("Not Balanced"); return; }
-                        char top = stack.Pop();
-                        if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{'))
-                        {
-                            Console.WriteLine("Not Balanced");
-                            return;
-                        }
-                    }
-                }
-                Console.WriteLine(stack.Count == 0 ? "Balanced" : "Not Balanced");
-            }
-        }*/
-        #endregion
-
-        #region Q5
-        /*
-        class Q5
-        {
-            public static void Run()
-            {
-                int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-                int[] result = arr.Distinct().ToArray();
-                Console.WriteLine(string.Join(" ", result));
-            }
-        }*/
-        #endregion
-
-        #region Q6
-
-        /*
-        class Q6
-        {
-            public static void Run()
-            {
-                List<int> list = Console.ReadLine().Split().Select(int.Parse).ToList();
-                list.RemoveAll(x => x % 2 != 0);
-                Console.WriteLine(string.Join(" ", list));
-            }
-        }*/
-        #endregion
-
-        #region Q7
-        /*
-        class Q7
-        {
-            public static void Run()
-            {
-                Queue<object> queue = new Queue<object>();
-                queue.Enqueue(1);
-                queue.Enqueue("Apple");
-                queue.Enqueue(5.28);
-                foreach (var item in queue) Console.WriteLine(item);
-            }
-        }*/
-        #endregion
-
-        #region Q8
-        /*
-        class Q8
-        {
-            public static void Run()
-            {
-                Stack<int> stack = new Stack<int>();
-                for (int i = 1; i <= 10; i++) stack.Push(i);
-                int target = int.Parse(Console.ReadLine());
+                int x = int.Parse(Console.ReadLine());
                 int count = 0;
-                bool found = false;
-                while (stack.Count > 0)
+                for (int j = 0; j < n; j++)
                 {
-                    count++;
-                    if (stack.Pop() == target)
-                    {
-                        found = true;
-                        break;
-                    }
+                    if (arr[j] > x) count++;
                 }
-                if (found) Console.WriteLine("Target was found successfully and the count = " + count);
-                else Console.WriteLine("Target was not found");
+                Console.WriteLine(count);
             }
-        }*/
-        #endregion
+        }
+    }
+    #endregion
 
-        #region Q9
-        /*
-        class Q9
+    #region Q2
+    class Q2
+    {
+        public static void Run()
         {
-            public static void Run()
+            int n = int.Parse(Console.ReadLine());
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+            bool isPalindrome = true;
+            for (int i = 0; i < n / 2; i++)
             {
-                string[] sizes = Console.ReadLine().Split(',');
-                int n1 = int.Parse(sizes[0]);
-                int n2 = int.Parse(sizes[1]);
-                int[] arr1 = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
-                int[] arr2 = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
-                List<int> result = new List<int>();
-                Dictionary<int, int> freq = new Dictionary<int, int>();
-                foreach (var num in arr1)
+                if (arr[i] != arr[n - i - 1])
                 {
-                    if (!freq.ContainsKey(num)) freq[num] = 0;
-                    freq[num]++;
+                    isPalindrome = false;
+                    break;
                 }
-                foreach (var num in arr2)
-                {
-                    if (freq.ContainsKey(num) && freq[num] > 0)
-                    {
-                        result.Add(num);
-                        freq[num]--;
-                    }
-                }
-                Console.WriteLine("[" + string.Join(",", result) + "]");
             }
-        }*/
-        #endregion
+            Console.WriteLine(isPalindrome ? "YES" : "NO");
+        }
+    }
+    #endregion
 
-        #region Q10
-        /*
-        class Q10
+    #region Q3
+    class Q3
+    {
+        public static void Run()
         {
-            public static void Run()
+            int n = int.Parse(Console.ReadLine());
+            Queue<int> queue = new Queue<int>();
+            foreach (var val in Console.ReadLine().Split())
             {
-                List<int> list = Console.ReadLine().Split(',').Select(int.Parse).ToList();
-                int target = int.Parse(Console.ReadLine());
-                for (int start = 0; start < list.Count; start++)
+                queue.Enqueue(int.Parse(val));
+            }
+            Stack<int> stack = new Stack<int>();
+            while (queue.Count > 0) stack.Push(queue.Dequeue());
+            while (stack.Count > 0) queue.Enqueue(stack.Pop());
+            foreach (var item in queue) Console.Write(item + " ");
+            Console.WriteLine();
+        }
+    }
+    #endregion
+
+    #region Q4
+    class Q4
+    {
+        public static void Run()
+        {
+            string s = Console.ReadLine();
+            Stack<char> stack = new Stack<char>();
+            foreach (char c in s)
+            {
+                if (c == '(' || c == '[' || c == '{') stack.Push(c);
+                else
                 {
-                    int sum = 0;
-                    for (int end = start; end < list.Count; end++)
+                    if (stack.Count == 0) { Console.WriteLine("Not Balanced"); return; }
+                    char top = stack.Pop();
+                    if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{'))
                     {
-                        sum += list[end];
-                        if (sum == target)
-                        {
-                            Console.WriteLine("[" + string.Join(", ", list.Skip(start).Take(end - start + 1)) + "]");
-                            return;
-                        }
+                        Console.WriteLine("Not Balanced");
+                        return;
                     }
                 }
             }
-        }*/
-        #endregion
+            Console.WriteLine(stack.Count == 0 ? "Balanced" : "Not Balanced");
+        }
+    }
+    #endregion
+
+    #region Q5
+    class Q5
+    {
+        public static void Run()
+        {
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+            int[] result = arr.Distinct().ToArray();
+            Console.WriteLine(string.Join(" ", result));
+        }
+    }
+    #endregion
+
+    #region Q6
+    class Q6
+    {
+        public static void Run()
+        {
+            List<int> list = Console.ReadLine().Split().Select(int.Parse).ToList();
+            list.RemoveAll(x => x % 2 != 0);
+            Console.WriteLine(string.Join(" ", list));
+        }
+    }
+    #endregion
+
+    #region Q7
+    class Q7
+    {
+        public static void Run()
+        {
+            Queue<object> queue = new Queue<object>();
+            queue.Enqueue(1);
+            queue.Enqueue("Apple");
+            queue.Enqueue(5.28);
+            foreach (var item in queue) Console.WriteLine(item);
+        }
+    }
+    #endregion
+
+    #region Q8
+    class Q8
+    {
+        public static void Run()
+        {
+            Stack<int> stack = new Stack<int>();
+            for (int i = 1; i <= 10; i++) stack.Push(i);
+            int target = int.Parse(Console.ReadLine());
+            int count = 0;
+            bool found = false;
+            while (stack.Count > 0)
+            {
+                count++;
+                if (stack.Pop() == target)
+                {
+                    found = true;
+                    break;
+                }
+            }
+            if (found) Console.WriteLine("Target was found successfully and the count = " + count);
+            else Console.WriteLine("Target was not found");
+        }
+    }
+    #endregion
+
+    #region Q9
+    class Q9
+    {
+        public static void Run()
+        {
+            string[] sizes = Console.ReadLine().Split(',');
+            int n1 = int.Parse(sizes[0]);
+            int n2 = int.Parse(sizes[1]);
+            int[] arr1 = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
+            int[] arr2 = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
+            List<int> result = new List<int>();
+            Dictionary<int, int> freq = new Dictionary<int, int>();
+            foreach (var num in arr1)
+            {
+                if (!freq.ContainsKey(num)) freq[num] = 0;
+                freq[num]++;
+            }
+            foreach (var num in arr2)
+            {
+                if (freq.ContainsKey(num) && freq[num] > 0)
+                {
+                    result.Add(num);
+                    freq[num]--;
+                }
+            }
+            Console.WriteLine("[" + string.Join(",", result) + "]");
+        }
+    }
+    #endregion
+
+    #region Q10
+    class Q10
+    {
+        public static void Run()
+        {
+            List<int> list = Console.ReadLine().Split(',').Select(int.Parse).ToList();
+            int target = int.Parse(Console.ReadLine());
+            for (int start = 0; start < list.Count; start++)
+            {
+                int sum = 0;
+                for (int end = start; end < list.Count; end++)
+                {
+                    sum += list[end];
+                    if (sum == target)
+                    {
+                        Console.WriteLine("[" + string.Join(", ", list.Skip(start).Take(end - start + 1)) + "]");
+                        return;
+                    }
+                }
+            }
+        }
+    }
+    #endregion
+
+    #region Q11
+    class Q11
+    {
+        public static void Run()
+        {
+            List<int> list = Console.ReadLine().Split(',').Select(int.Parse).ToList();
+            int k = int.Parse(Console.ReadLine());
+            Queue<int> queue = new Queue<int>(list);
+            Stack<int> stack = new Stack<int>();
+            for (int i = 0; i < k; i++) stack.Push(queue.Dequeue());
+            while (stack.Count > 0) queue.Enqueue(stack.Pop());
+            int size = queue.Count;
+            for (int i = 0; i < size - k; i++) queue.Enqueue(queue.Dequeue());
+            Console.WriteLine("[" + string.Join(", ", queue) + "]");
+        }
+    }
+    #endregion
+
+    class Program
+    {
+        static void Main()
+        {
+           
+            // Q1.Run();
+            // Q2.Run();
+            // Q3.Run();
+            // Q4.Run();
+        }
     }
 }
