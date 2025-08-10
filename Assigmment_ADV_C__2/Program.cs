@@ -202,5 +202,30 @@ namespace Assigmment_ADV_C__2
             }
         }*/
         #endregion
+
+        #region Q10
+        /*
+        class Q10
+        {
+            public static void Run()
+            {
+                List<int> list = Console.ReadLine().Split(',').Select(int.Parse).ToList();
+                int target = int.Parse(Console.ReadLine());
+                for (int start = 0; start < list.Count; start++)
+                {
+                    int sum = 0;
+                    for (int end = start; end < list.Count; end++)
+                    {
+                        sum += list[end];
+                        if (sum == target)
+                        {
+                            Console.WriteLine("[" + string.Join(", ", list.Skip(start).Take(end - start + 1)) + "]");
+                            return;
+                        }
+                    }
+                }
+            }
+        }*/
+        #endregion
     }
 }
