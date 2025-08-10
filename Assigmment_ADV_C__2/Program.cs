@@ -78,6 +78,7 @@ namespace Assigmment_ADV_C__2
         #endregion
 
         #region Q4
+        /*
         class Q4
         {
             public static void main()
@@ -100,9 +101,20 @@ namespace Assigmment_ADV_C__2
                 }
                 Console.WriteLine(stack.Count == 0 ? "Balanced" : "Not Balanced");
             }
-        }
+        }*/
         #endregion
 
+        #region Q5
+        class Q5
+        {
+            public static void Run()
+            {
+                int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+                int[] result = arr.Distinct().ToArray();
+                Console.WriteLine(string.Join(" ", result));
+            }
+        }
+        #endregion
 
 
     }
