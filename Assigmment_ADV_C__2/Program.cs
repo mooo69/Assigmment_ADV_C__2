@@ -56,6 +56,26 @@ namespace Assigmment_ADV_C__2
          }*/
         #endregion
 
+        #region Q3
+        /*
+        class Q3
+        {
+            public static void Run()
+            {
+                int n = int.Parse(Console.ReadLine());
+                Queue<int> queue = new Queue<int>();
+                foreach (var val in Console.ReadLine().Split())
+                {
+                    queue.Enqueue(int.Parse(val));
+                }
+                Stack<int> stack = new Stack<int>();
+                while (queue.Count > 0) stack.Push(queue.Dequeue());
+                while (stack.Count > 0) queue.Enqueue(stack.Pop());
+                foreach (var item in queue) Console.Write(item + " ");
+                Console.WriteLine();
+            }
+        }*/
+        #endregion
 
 
     }
