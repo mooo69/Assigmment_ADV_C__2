@@ -146,5 +146,30 @@ namespace Assigmment_ADV_C__2
         }*/
         #endregion
 
+        #region Q8
+        /*
+        class Q8
+        {
+            public static void Run()
+            {
+                Stack<int> stack = new Stack<int>();
+                for (int i = 1; i <= 10; i++) stack.Push(i);
+                int target = int.Parse(Console.ReadLine());
+                int count = 0;
+                bool found = false;
+                while (stack.Count > 0)
+                {
+                    count++;
+                    if (stack.Pop() == target)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) Console.WriteLine("Target was found successfully and the count = " + count);
+                else Console.WriteLine("Target was not found");
+            }
+        }*/
+        #endregion
     }
 }
