@@ -105,6 +105,7 @@ namespace Assigmment_ADV_C__2
         #endregion
 
         #region Q5
+        /*
         class Q5
         {
             public static void Run()
@@ -113,9 +114,20 @@ namespace Assigmment_ADV_C__2
                 int[] result = arr.Distinct().ToArray();
                 Console.WriteLine(string.Join(" ", result));
             }
-        }
+        }*/
         #endregion
 
+        #region Q6
+        class Q6
+        {
+            public static void Run()
+            {
+                List<int> list = Console.ReadLine().Split().Select(int.Parse).ToList();
+                list.RemoveAll(x => x % 2 != 0);
+                Console.WriteLine(string.Join(" ", list));
+            }
+        }
+        #endregion
 
     }
 }
