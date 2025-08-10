@@ -77,6 +77,33 @@ namespace Assigmment_ADV_C__2
         }*/
         #endregion
 
+        #region Q4
+        class Q4
+        {
+            public static void main()
+            {
+                string s = Console.ReadLine();
+                Stack<char> stack = new Stack<char>();
+                foreach (char c in s)
+                {
+                    if (c == '(' || c == '[' || c == '{') stack.Push(c);
+                    else
+                    {
+                        if (stack.Count == 0) { Console.WriteLine("Not Balanced"); return; }
+                        char top = stack.Pop();
+                        if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{'))
+                        {
+                            Console.WriteLine("Not Balanced");
+                            return;
+                        }
+                    }
+                }
+                Console.WriteLine(stack.Count == 0 ? "Balanced" : "Not Balanced");
+            }
+        }
+        #endregion
+
+
 
     }
 }
